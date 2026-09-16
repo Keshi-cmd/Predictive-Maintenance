@@ -3,19 +3,6 @@ import pandas as pd
 
 # This file contains all the models (use sklearn this file is only for learning purpose)
 
-# # Model function
-# def model(x_train, w = None, b = None):
-#     m, n = x_train.shape
-#     if (w == None) & (b == None):
-#         w =  np.zeros((n,))
-#         b = 0
-#     f_wb = np.dot(x_train, w) + b
-#     return f_wb
-
-# # Sigmoid Function
-# def sigmoid(z):
-#     g = 1 / (np.exp(-z) + 1)
-#     return g
 
 # Logistic Regression
 class logistic_regression:
