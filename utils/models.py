@@ -46,3 +46,7 @@ class logistic_regression:
         p = 1 / (np.exp(-z) + 1)
         y = (p > 0.5).astype(int)
         return y
+
+class desicion_tree:
+    def __init__(self, ):
+        pass
