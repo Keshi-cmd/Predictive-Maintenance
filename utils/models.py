@@ -47,6 +47,30 @@ class logistic_regression:
         y = (p > 0.5).astype(int)
         return y
 
-class desicion_tree:
-    def __init__(self, ):
+
+# Decision Trees
+class decision_tree:
+    def __init__(self, max_depth, min_samples_split):
+        self.max_depth = max_depth
+        self.min_samples_split = min_samples_split
+        self.tree = None
+
+    def entropy(self, y):
+        p = (y == 1).sum() / len(y)
+        if p == 0 or p == 1:
+            return 0
+        else:
+            h = -(p * np.log2(p) + (1-p) * np.log2(1-p))
+        return h
+
+    def split(self, X, y, threshold, feature_index):
+        mask = X[:, feature_index] <= threshold
+        X_left = X[mask]
+        y_left = y[mask]
+        X_right = X[~mask]
+        y_right = y[~mask]
+
+        return X_left, y_left, X_right, y_right
+
+    def info_gain(self, ):
         pass
